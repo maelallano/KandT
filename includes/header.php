@@ -7,7 +7,6 @@ $request = 'SELECT `id`, `title`, `description`, `label`, `alt`, `src` FROM `pag
 
 $stmt = $conn->prepare($request);
 $stmt->execute();
-/*$row = $stmt->fetch(PDO::FETCH_ASSOC);*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,14 +28,6 @@ $stmt->execute();
                     <?php addActive('index.php?id=' . $row['id'], $row['title'])?>
                 <?php endwhile;?>
                 <li><a href="add.php">add</a></li>
-
-                <?php /* addActive('index.php?'.$row['id'], $row['description'])?>
-                <?php addActive('kittens.php', 'Chatonse')?>
-                <?php addActive('ironmaiden.php', 'Iron Maidennnnn')?>
-                <?php addActive('tokyo.php', 'Tokyo')?>
-                <li><a href="indexSoon.php?id=3">Oui</a></li>
-
-                <?php addActive('add.php', 'add')*/ ?>
             </ul>
         </div>
     </div>
